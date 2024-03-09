@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Recommender</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .bud {
+            position: relative;
+            top: 0.4rem;
+            text-align: center;
+            background-color: #9fc8f7;
+        }
+
+        .price {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+        }
+
+        .we {
+            background-color: chocolate;
+            color: #fff;
+            font-size: 38px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mobo.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Service</a>
+                    </li>
+
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="home">
+    </div> -->
+    <script>
+        var userBuget = prompt("Enter your budget", 'low ,medium or high');
+        if (userBuget == 'low' || userBuget == 'medium' || userBuget == 'high') {
+            var userOperatingSystem = prompt('Which operting system you want?', 'android or ios');
+            if (userBuget == "high" || userBuget == 'medium') {
+                document.write(`<h3 class = "bud">Yes ${userOperatingSystem} is available`);
+            } else {
+                document.write('In low budget no Iphone is available only Android is available');
+            }
+
+            var cameraQuality = prompt('Which camera quality do you need', '(basic , moderate , high)');
+            document.write(`<h3 class = "bud">You need ${cameraQuality} quality camera`);
+            // var batteryLife = 'long';
+            if (userBuget == 'high' || userBuget == 'medium') {
+                document.write(`<h3 class = "bud">Battery life up to 28 hours talk time`);
+            } else {
+                document.write(`<h3 class = "bud">Battery life up to 5 hours `);
+            }
+
+            if (userBuget == 'high' || userBuget == 'medium') {
+                document.write(`<h3 class = "bud">Screen Size 6.7 inches` + "<br>");
+            }
+            else {
+                document.write(`<h3 class = "bud">Screen Size 4.8 inches` + "<br>");
+            }
+
+            document.write(`<h1 class="we">Based on your preference, we can recommed you the following mobile phone`);
+
+            if (userBuget == "high") {
+                document.write(`<h3 class = "bud">Iphone 13 pro Max` + "<br>");
+                document.write(`<h3 class="price">Rs 150000`)
+            }
+            else if (userBuget == 'medium') {
+                document.write(`<h3 class = "bud">Iphone 8` + "<br>");
+                document.write(`<h3 class="price">Rs 80000`)
+            }
+            else {
+                document.write(`<h3 class = "bud">Infinix Hot 10 play` + "<br>");
+                document.write(`<h3 class="price">Rs 25000`)
+            }
+        }
+        else {
+            document.write(`<h3 class = "bud">Please tell your Budget`);
+        }
+
+    </script>
+</body>
